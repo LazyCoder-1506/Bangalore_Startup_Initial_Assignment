@@ -1,0 +1,63 @@
+a.card, a.card:hover
+{
+    text-decoration : none;
+    color : black;
+}
+
+.carousel-inner .active + .carousel-item
+{
+    display : block;
+}
+
+.carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item {
+    transition: none;
+}
+
+.ribbon
+{
+    margin: 0;
+    padding: 0;
+    background: green;
+    color:white;
+    font-size : 90%;
+    text-align:center;
+    width : 100px;
+    position: absolute;
+    top:-15px;
+    right:-45px;
+    transform: rotate(45deg);
+    transform-origin: top left;
+    clip-path : polygon(20px 0, 80px 0, 100% 100%, 0 100%);
+}
+
+.carousel-control-prev
+{
+    background-color : grey;
+    left : 0;
+    height : 20%;
+    top : 40%;
+    opacity : 1;
+    width : 5%;
+}
+
+.carousel-control-prev:hover
+{
+    opacity : 1;
+    background-color : black;
+}
+
+.carousel-control-next
+{
+    background-color : grey;
+    right : 0;
+    height : 20%;
+    top : 40%;
+    opacity : 1;
+    width : 5%;
+}
+
+.carousel-control-next:hover
+{
+    opacity : 1;
+    background-color : black;
+}
