@@ -4,15 +4,6 @@ a.card, a.card:hover
     color : black;
 }
 
-.carousel-inner .active + .carousel-item
-{
-    display : block;
-}
-
-.carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item {
-    transition: none;
-}
-
 .ribbon
 {
     margin: 0;
@@ -34,8 +25,8 @@ a.card, a.card:hover
 {
     background-color : grey;
     left : 0;
-    height : 20%;
-    top : 40%;
+    height : 10%;
+    top : 45%;
     opacity : 1;
     width : 5%;
 }
@@ -50,8 +41,8 @@ a.card, a.card:hover
 {
     background-color : grey;
     right : 0;
-    height : 20%;
-    top : 40%;
+    height : 10%;
+    top : 45%;
     opacity : 1;
     width : 5%;
 }
@@ -60,4 +51,41 @@ a.card, a.card:hover
 {
     opacity : 1;
     background-color : black;
+}
+
+.carousel-item
+{
+    height : 385px;
+}
+
+.card
+{
+    border : 1px solid lightgrey;
+    margin : 2px 2px 2px 2px;
+    height : 380px;
+    box-shadow : 1px 1px 2px lightgrey;
+    font-size : 14px;
+}
+
+.card:hover
+{
+    box-shadow : 0px 0px 5px grey;
+}
+
+.card_description
+{
+    height : 100px;
+    overflow : hidden;
+    text-overflow : ellipsis;
+    font-size : 13px;
+}
+
+img
+{
+    width : 100%;
+}
+
+.card_table
+{
+    font-size : 13px;
 }
