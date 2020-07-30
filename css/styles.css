@@ -90,6 +90,20 @@ img
     font-size : 13px;
 }
 
+.profile_info
+{
+    white-space : nowrap;
+    overflow : hidden;
+    text-overflow : ellipsis;
+}
+
+.profile_data
+{
+    white-space : nowrap;
+    overflow : hidden;
+    text-overflow : ellipsis;
+}
+
 @media (max-width : 400px)
 {
     .card_description
