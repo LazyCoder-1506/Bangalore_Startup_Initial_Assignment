@@ -15,8 +15,8 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
-        <div class="container">
+    <nav class="navbar navbar-dark bg-primary navbar-expand-sm fixed-top">
+        <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -35,12 +35,190 @@
         </div>
     </nav>
 
+    <button type = "button" class = "d-lg-none btn btn-block btn-primary fixed-bottom" id = "side_panel_toggler">Filters</button>
+
     <div class = "container-fluid">
         <div class = "row row-content">
-            <div class = "col-2" style = "background-color : lightgrey">
-                <h4>filter form</h4>
+            <div class = "col-12 col-lg-3" id = "side_panel" style = "background-color : lightgrey">
+                <h4 class = "m-2">Filter By</h4>
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#businesses"
+                        role="tab" data-toggle="tab">Businesses</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#" role="tab"
+                        data-toggle="tab">Investors and buyers</a>
+                    </li>
+                </ul>
+                <div class = "tab-content text-secondary">
+                    <div role="tabpanel" class="tab-pane fade show active" id="businesses">
+                        <p><i class = "fa fa-briefcase"></i> Transaction Types</p>
+                        <form>
+                            <div class = "radio">
+                                <label><input type="radio" name="transactions" checked> All Transactions</label>
+                            </div>
+                            <div class = "radio">
+                                <label><input type="radio" name="transactions" > Businesses for Sale</label>
+                            </div>
+                            <div class = "radio">
+                                <label><input type="radio" name="transactions" > Investment Opportunities</label>
+                            </div>
+                            <div class = "radio">
+                                <label><input type="radio" name="transactions" > Business Loan</label>
+                            </div>
+                            <div class = "radio">
+                                <label><input type="radio" name="transactions" > Assets for Sale</label>
+                            </div>
+                            <div class = "radio">
+                                <label><input type="radio" name="transactions" > Franchise Opportunities</label>
+                            </div>
+                            <button type = "submit" class = "btn btn-outline-dark btn-sm">Apply Filter</button>
+                        </form>
+                        <hr style = "border-bottom : 1px solid grey">
+                        <button class = "btn text-secondary" style = "background-color : lightgrey">Location <i class = "fa fa-map-marker"></i></button>
+                        <input type = "text" id = "location_filter" placeholder = "Filter...">
+                        <form>
+                            <div class = "checkbox">
+                                <label><input type="checkbox" value = ""> Africa</label>
+                            </div>
+                            <div class = "checkbox">
+                                <label><input type="checkbox" value = "" > Asia</label>
+                            </div>
+                            <div class = "checkbox">
+                                <label><input type="checkbox" value = "" > Europe</label>
+                            </div>
+                            <div class = "checkbox">
+                                <label><input type="checkbox" value = "" > North America</label>
+                            </div>
+                            <div class = "checkbox">
+                                <label><input type="checkbox" value = "" > Oceania</label>
+                            </div>
+                            <div class = "checkbox">
+                                <label><input type="checkbox" value = "" > South America</label>
+                            </div>
+                            <button type = "submit" class = "btn btn-outline-dark btn-sm">Apply Filter</button>
+                        </form>
+                        <hr style = "border-bottom : 1px solid grey">
+                        <button class = "btn text-secondary" style = "background-color : lightgrey">Industries <i class = "fa fa-sitemap"></i></button>
+                        <input type = "text" id = "location_filter" placeholder = "Filter...">
+                        <form>
+                            <div class = "checkbox">
+                                <label><input type="checkbox" value = ""> Business Services</label>
+                            </div>
+                            <div class = "checkbox">
+                                <label><input type="checkbox" value = "" > Education</label>
+                            </div>
+                            <div class = "checkbox">
+                                <label><input type="checkbox" value = "" > Finance</label>
+                            </div>
+                            <div class = "checkbox">
+                                <label><input type="checkbox" value = "" > Energy</label>
+                            </div>
+                            <div class = "checkbox">
+                                <label><input type="checkbox" value = "" > Food & Beverage</label>
+                            </div>
+                            <div class = "checkbox">
+                                <label><input type="checkbox" value = "" > Healthcare</label>
+                            </div>
+                            <div class = "checkbox">
+                                <label><input type="checkbox" value = "" > Industrial</label>
+                            </div>
+                            <div class = "checkbox">
+                                <label><input type="checkbox" value = "" > Logistics</label>
+                            </div>
+                            <div class = "checkbox">
+                                <label><input type="checkbox" value = "" > Media</label>
+                            </div>
+                            <button type = "submit" class = "btn btn-outline-dark btn-sm">Apply Filter</button>
+                        </form>
+                        <hr style = "border-bottom : 1px solid grey">
+                        <p class = "mb-0">Investment Size</p>
+                        <p class = "mb-0"><small>INR 11.3 thousand - 7501.1 crore</small></p>
+                        <div class="progress" style = "height : 5px">
+                            <div class="progress-bar progress-bar-info" role="progressbar" style="width:100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                            </div>
+                        </div>
+                        <hr style = "border-bottom : 1px solid grey">
+                        <br>
+                        <div id = "accordion">
+                            <div class = "card" style = "border : none; background-color : #f8f8f8">
+                                <a class = "collapsed" data-toggle="collapse" data-target="#run_rate">
+                                    Run Rate Sales<span class = "pull-right">+</span>
+                                </a>
+                                <div class="collapse" id="run_rate" data-parent="#accordion">
+                                    <div class="card-body pt-0 pb-0">
+                                        <p class="d-none d-sm-block">
+                                            <small>INR 0 - 2446.9 crore</small>
+                                            <div class="progress" style = "height : 5px">
+                                                <div class="progress-bar progress-bar-info" role="progressbar" style="width:100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                                </div>
+                                            </div>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class = "card" style = "border : none; background-color : #f8f8f8">
+                                <a class = "collapsed" data-toggle="collapse" data-target="#ebitda">
+                                    EBITDA <i class = "fa fa-info-circle"></i><span class = "pull-right">+</span>
+                                </a>
+                                <div class="collapse" id="ebitda" data-parent="#accordion">
+                                    <div class="card-body pt-0">
+                                        <p class="d-none d-sm-block">
+                                            <small>INR -9 - 734.1 crore</small>
+                                            <div class="progress" style = "height : 5px">
+                                                <div class="progress-bar progress-bar-info" role="progressbar" style="width:100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                                </div>
+                                            </div>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class = "col-10">
+            <div class = "col-12 col-lg-9">
+                <div class="row row-content">
+                    <ol class="col-12 breadcrumb">
+                        <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+                        <li class="breadcrumb-item"><a href="#">Businesses for Sale</a></li>
+                    </ol>
+                </div>
+                <div class = "row row-content">
+                    <div class = "col-12">
+                        <h5>
+                            Businesses for Sale and Investment Opportunities - Buy or invest in a Business
+                        </h5>
+                    </div>
+                </div>
+                <div class = "row row-content">
+                    <div class = "col-12">
+                        <p class = "text-secondary" style = "font-size : 14px;">
+                            15000+ Businesses for Sale and Investment Opportunities as on August 2020. 
+                            Buy or invest in a Business from 172 countries, 950+ Industries, with profit margins up to 60%. 
+                            Explore pre-screened Businesses for Sale and Investment Opportunities with verified contact details, 
+                            valuation details and business photographs. Join our 1,349,000+ member network to Buy or invest in a Business. 
+                            Create a Business profile to Sell or finance your Business.
+                        </p>
+                    </div>
+                </div>
+                <div class = "row row-content">
+                    <div class = "col-12">
+                        <select class = "mb-3 pull-right" id = "sort_by">
+                            <option value = "0">Sort By</option>
+                            <option value = "1">option 1</option>
+                            <option value = "2">option 2</option>
+                            <option value = "3">option 3</option>
+                            <option value = "4">option 4</option>
+                            <option value = "5">option 5</option>
+                            <option value = "6">option 6</option>
+                            <option value = "7">option 7</option>
+                        </select>
+                    </div>
+                </div>
                 <diV class = "row row-content">
                     <div class = "col-12 col-md-4">
                         <a href="#" class="card container mb-4">
@@ -573,9 +751,19 @@
                         </a>
                     </div>
                 </diV>
+
+                <div class = "row row-content justify-content-center">
+                    <button class = "btn mb-5 mr-2 disabled">&#8810; Previous</button>
+                    <button class = "btn btn-outline-dark mb-5">Next &#8811;</button>
+                </div>
             </div>
         </div>
     </div>
+
+    <footer>
+        <h3>Here will be footer</h3>
+        <h5>Made by Pranayan Metiya</h5>
+    </footer>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -584,6 +772,15 @@
     <script>
         $(document).ready(function(){
             $('[data-toggle="tooltip"]').tooltip();
+            $("#accordion").accordion();
+        });
+    </script>
+    <script>
+        $(document).ready(function(){
+        $("#side_panel_toggler").toggle(
+            function(){$("#side_panel").css({"display": "block"});},
+            function(){$("#side_panel").css({"display": "none"});}   
+        );
         });
     </script>
 </body>

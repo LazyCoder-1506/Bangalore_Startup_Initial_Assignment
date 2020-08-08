@@ -65,7 +65,7 @@ a.card, a.card:hover
     height : 385px;
 }
 
-.card
+a.card
 {
     border : 1px solid lightgrey;
     margin : 2px 2px 2px 2px;
@@ -73,7 +73,7 @@ a.card, a.card:hover
     font-size : 14px;
 }
 
-.card:hover
+a.card:hover
 {
     box-shadow : 0px 0px 5px grey;
 }
@@ -120,6 +120,14 @@ img
     font-size : 14px;
 }
 
+.tab-content {
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+    border-bottom: 1px solid grey;
+    background-color : #f8f8f8;
+    padding: 10px;
+}
+
 @media (max-width : 400px)
 {
     .card_description
@@ -139,9 +147,20 @@ img
     {
         font-size : 12px;
     }
+    
+    body
+    {
+        padding-bottom : 50px;
+    }
+
+    #side_panel
+    {
+        display : none;
+    }
 }
 
 @media only screen and (min-width: 768px) { 
     .brnodisplay {
         display: none;
     }
+}
