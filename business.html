@@ -35,11 +35,11 @@
         </div>
     </nav>
 
-    <button type = "button" class = "d-lg-none btn btn-block btn-primary fixed-bottom" id = "side_panel_toggler">Filters</button>
+    <button type = "button" class = "d-lg-none btn btn-block btn-primary fixed-bottom" data-toggle = "collapse" data-target = "#side_panel" id = "side_panel_toggler">Filters</button>
 
     <div class = "container-fluid">
         <div class = "row row-content">
-            <div class = "col-12 col-lg-3" id = "side_panel" style = "background-color : lightgrey">
+            <div class = "col-12 col-lg-3 collapse" id = "side_panel" style = "background-color : lightgrey">
                 <h4 class = "m-2">Filter By</h4>
                 <ul class="nav nav-tabs">
                     <li class="nav-item">
@@ -773,14 +773,6 @@
         $(document).ready(function(){
             $('[data-toggle="tooltip"]').tooltip();
             $("#accordion").accordion();
-        });
-    </script>
-    <script>
-        $(document).ready(function(){
-        $("#side_panel_toggler").toggle(
-            function(){$("#side_panel").css({"display": "block"});},
-            function(){$("#side_panel").css({"display": "none"});}   
-        );
         });
     </script>
 </body>
