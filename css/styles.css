@@ -1,7 +1,24 @@
-body
+#business_body
 {
     padding : 50px 0px 0px 0px;
     z-index : 0;
+}
+
+#navigation_bar
+{
+    background-color : rgba(0,0,0,0.4)
+}
+
+#home_header
+{
+    background-image : url(../images/home_header.jpg);
+    background-size : cover;
+    color : floralwhite;
+}
+
+#get_started
+{
+    background-color : rgba(0,0,0,0.4);
 }
 
 a.card, a.card:hover
@@ -126,6 +143,28 @@ img
     border-bottom: 1px solid grey;
     background-color : #f8f8f8;
     padding: 10px;
+}
+
+.foot_header
+{
+    color : #383838;
+    font-size : 14px;
+}
+
+.foot_link
+{
+    color : grey !important;
+    font-size : 12px;
+}
+
+.list-inline-item
+{
+    font-size : 12px;
+}
+
+.btn-xs
+{
+    font-size : 10px;
 }
 
 @media (max-width : 400px)
