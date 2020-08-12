@@ -167,6 +167,22 @@ img
     font-size : 10px;
 }
 
+.fixed_right_button
+{
+    transform : rotate(270deg);
+    -webkit-transform : rotate(270deg);
+    position : fixed;
+    right : -30px;
+    bottom : 30vh;
+}
+
+.help_input
+{
+    width : 100%;
+    border : 1px solid lightgrey;
+    border-radius : 5px;
+}
+
 @media (max-width : 400px)
 {
     .card_description

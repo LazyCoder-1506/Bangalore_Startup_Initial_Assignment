@@ -35,6 +35,82 @@
         </div>
     </nav>
 
+    <button class = "btn btn-sm btn-primary fixed_right_button" id = "help_btn" data-toggle = "collapse" data-target = "#help_modal">Need Help?</button>
+
+    <div id="help_modal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Need Help? <small>Write to Us!</small></h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-row mt-3">
+                            <div class = "col-12">
+                                <h6>Question</h6>
+                            </div> 
+                            <div class = "col-12">
+                                <textarea class = "help_input" id = "question" name = "question" rows = "4"></textarea>
+                            </div>
+                        </div>
+                        <div class = "form-row mt-3">
+                            <div class = "col-12 col-md-6">
+                                <div class = "row row-content">
+                                    <div class = "col-12">
+                                        <h6>E-mail</h6>
+                                    </div>
+                                </div>
+                                <div class = "row row-content">
+                                    <div class = "col-12">
+                                        <input class = "help_input" type = "email" name = "email" id = "email">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class = "col-12 col-md-6">
+                                <div class = "row row-content">
+                                    <div class = "col-12">
+                                        <h6>Mobile Number (Optional)</h6>
+                                    </div>
+                                </div>
+                                <div class = "row row-content">
+                                    <div class = "col-12">
+                                        <input class = "help_input" type = "text" name = "mobile" id = "mobile">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class = "form-row mt-3" style = "background-color : #f5f5f5">
+                            <div class = "col-12">
+                                <div class = "row row-content">
+                                    <div class = "col-12">
+                                        <h6>Frequently Asked questions</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class = "row row-content">
+                                <div class = "col-12">
+                                    <ul class = "list-unstyled ml-2">
+                                        <li><a style = "font-size : 12px;" href = "#">How can I contact you or meet you?</a></li>
+                                        <li><a style = "font-size : 12px;" href = "#">How do I get started on SMERGERS?</a></li>
+                                        <li><a style = "font-size : 12px;" href = "#">How successful has SMERGERS been in helping its users successfully close a deal?</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row mt-3">
+                            <button type="button" class="btn btn-secondary btn-sm ml-auto"><i class = "fa fa-camera"></i> Screenshot</button>
+                            <button type="submit" class="btn btn-secondary btn-sm ml-1"><i class = "fa fa-paperclip"></i> Attach File</button>
+                            <button type="submit" class="btn btn-success btn-sm ml-1">Submit</button>        
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <header class="jumbotron" id = "home_header">
         <div class="container">
             <div class = "row row-content">
@@ -820,6 +896,9 @@
     <script>
         $(document).ready(function(){
             $('[data-toggle="tooltip"]').tooltip();
+            $('#help_btn').click(function(){
+                $('#help_modal').modal('toggle');
+            });
         });
     </script>
 </body>
