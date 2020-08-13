@@ -183,6 +183,17 @@ img
     border-radius : 5px;
 }
 
+.no_border_no_bg
+{
+    border : none;
+    background : none;
+}
+
+.faq_a
+{
+    font-size : 14px;
+}
+
 @media (max-width : 400px)
 {
     .card_description

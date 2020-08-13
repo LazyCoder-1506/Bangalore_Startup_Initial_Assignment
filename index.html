@@ -789,7 +789,64 @@
 
     </div>
 
-    <footer>
+    <div class = "vw-100 py-4" style = "background-color : #f1f1f1">
+        <div class = "container">
+            <div class = "row row-content">
+                <div class = "col-12 col-md-2">
+                    <p style = "font-size : 24px; color : grey">Frequently Asked Questions</p>
+                </div>
+                <div class = "col-12 col-md-10">
+                    <p class = "faq_q mb-0 text-primary" data-toggle = "collapse" data-target = "#faq_a1" id = "faq_q1">
+                        Is SMERGERS an investment bank?
+                    </p>
+                    <p class = "faq_a text-secondary collapse show" id = "faq_a1">
+                        SMERGERS is an investment banking platform which aims to remove all the 
+                        clutter and make quality introductions between businesses, investors, acquirers, 
+                        lenders and advisors, extending beyond their geographical location.
+                    </p>
+                    <p class = "faq_q mb-0 text-primary" data-toggle = "collapse" data-target = "#faq_a2" id = "faq_q2">
+                        Is SMERGERS a ‘business for sale’ website?
+                    </p>
+                    <p class = "faq_a text-secondary collapse show" id = "faq_a2">
+                        Yes and no. Yes, because we have sell side profiles of businesses which are seeking a takeover. 
+                        And no, because we are not a classifieds website, 
+                        but a private network of members.
+                    </p>
+                    <div id = "faq_more" class = "collapse">
+                        <p class = "faq_q mb-0 text-primary" data-toggle = "collapse" data-target = "#faq_a3" id = "faq_q3">
+                            What is Business Valuation?
+                        </p>
+                        <p class = "faq_a text-secondary collapse show" id = "faq_a3">
+                            Business valuation is process whereby a fair value of a company is arrived at 
+                            using one or more of the valuation methodologies.
+                        </p>
+                        <p class = "faq_q mb-0 text-primary" data-toggle = "collapse" data-target = "#faq_a4" id = "faq_q4">
+                            Can businesses / investors from any country register on SMERGERS?
+                        </p>
+                        <p class = "faq_a text-secondary collapse show" id = "faq_a4">
+                            SMERGERS is a global platform with businesses and acquirers / 
+                            investors from across the globe. Businesses and investors from any 
+                            country or industry can register on SMERGERS. The only pre-requisite is 
+                            that the business needs to be a registered entity with the Government and 
+                            should be able to produce proof of the same when required and investors should be working in a company or if 
+                            self employed must be able to produce proof of business.
+                        </p>
+                        <p class = "faq_q mb-0 text-primary" data-toggle = "collapse" data-target = "#faq_a5" id = "faq_q5">
+                            Should I use SMERGERS instead of an advisor?
+                        </p>
+                        <p class = "faq_a text-secondary collapse show" id = "faq_a5">
+                            You should use SMERGERS to gain qualified leads from large network of investors, 
+                            buyers, lenders and advisors from across the globe. You may also want to connect with suitable advisors on 
+                            SMERGERS who can help negotiate and close your deal.
+                        </p>
+                    </div>
+                    <p class = "text-primary" id = "faq_toggle" data-toggle = "collapse" data-target = "#faq_more" onclick = "faq_show_function()" style = "font-size : 12px;">Show More</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class = "pt-4">
         <div class = "container">
             <div class = "row row-content">
                 <div class = "col-6 col-md-2">
@@ -890,16 +947,27 @@
     </footer>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script>
         $(document).ready(function(){
             $('[data-toggle="tooltip"]').tooltip();
+            $(".accordion").accordion();
             $('#help_btn').click(function(){
                 $('#help_modal').modal('toggle');
             });
         });
+    </script>
+    <script>
+        function faq_show_function(){
+            var div=document.getElementById("faq_toggle");
+            if(div.innerHTML === "Show More"){
+                div.innerHTML = "Show Less";}
+            else if(div.innerHTML === "Show Less"){
+                div.innerHTML = "Show More";}
+        }
     </script>
 </body>
 
