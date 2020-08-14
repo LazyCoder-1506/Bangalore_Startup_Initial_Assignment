@@ -183,10 +183,57 @@ img
     border-radius : 5px;
 }
 
+.news_pic
+{
+    height : 100px;
+    background-size : 100% 100%;
+    box-shadow : 0px 5px 10px lightgrey;
+}
+
+.news_pic:hover
+{
+    box-shadow : 0px 5px 10px lightblue;
+}
+
+#yahoo
+{
+    background-image : url(../images/yahoo.jpg);
+}
+
+#yourstory
+{
+    background-image : url(../images/yourstory.jpg);
+}
+
+#silicon
+{
+    background-image : url(../images/silicon.jpg);
+}
+
+#economic
+{
+    background-image : url(../images/economic.jpg);
+}
+
+#mintasia
+{
+    background-image : url(../images/mintasia.jpg);
+}
+
+#entrepreneur
+{
+    background-image : url(../images/entrepreneur.jpg);
+}
+
 .no_border_no_bg
 {
     border : none;
     background : none;
+}
+
+.faq_q
+{
+    text-decoration : none !important;
 }
 
 .faq_a

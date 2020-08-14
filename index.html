@@ -786,7 +786,46 @@
                 </div>
             </div>
         </div>
+    </div>
 
+    <div class = "container py-5">
+        <div class = "row mb-3">
+            <div class = "col-12 text-center">
+                <h3>SMERGERS in the News</h3>
+            </div>
+        </div>
+        <div class = "row mb-3">
+            <div class = "col-12 col-md-8 offset-md-2 text-center">
+                <p class = "text-info" id = "news_info">
+                    For the World's 460 Million SMEs, FinTech Firm SMERGERS to Become a One-stop Investment Bank.
+                </p>
+            </div>
+        </div>
+        <div class = "row mb-3">
+            <div class = "col-6 col-md-4 col-lg-2">
+                <div class = "news_pic" id = "yahoo"></div>
+            </div>
+            <div class = "col-6 col-md-4 col-lg-2">
+                <div class = "news_pic" id = "silicon"></div>
+            </div>
+            <div class = "col-6 col-md-4 col-lg-2">
+                <div class = "news_pic" id = "yourstory"></div>
+            </div>
+            <div class = "col-6 col-md-4 col-lg-2">
+                <div class = "news_pic" id = "economic"></div>
+            </div>
+            <div class = "col-6 col-md-4 col-lg-2">
+                <div class = "news_pic" id = "mintasia"></div>
+            </div>
+            <div class = "col-6 col-md-4 col-lg-2">
+                <div class = "news_pic" id = "entrepreneur"></div>
+            </div>
+        </div>
+        <div class = "row">
+            <div class = "col-12 text-center mt-3">
+                <button class = "btn btn-lg btn-warning">Login to Get Started</button>
+            </div>
+        </div>
     </div>
 
     <div class = "vw-100 py-4" style = "background-color : #f1f1f1">
@@ -796,51 +835,63 @@
                     <p style = "font-size : 24px; color : grey">Frequently Asked Questions</p>
                 </div>
                 <div class = "col-12 col-md-10">
-                    <p class = "faq_q mb-0 text-primary" data-toggle = "collapse" data-target = "#faq_a1" id = "faq_q1">
-                        Is SMERGERS an investment bank?
-                    </p>
-                    <p class = "faq_a text-secondary collapse show" id = "faq_a1">
-                        SMERGERS is an investment banking platform which aims to remove all the 
-                        clutter and make quality introductions between businesses, investors, acquirers, 
-                        lenders and advisors, extending beyond their geographical location.
-                    </p>
-                    <p class = "faq_q mb-0 text-primary" data-toggle = "collapse" data-target = "#faq_a2" id = "faq_q2">
-                        Is SMERGERS a ‘business for sale’ website?
-                    </p>
-                    <p class = "faq_a text-secondary collapse show" id = "faq_a2">
-                        Yes and no. Yes, because we have sell side profiles of businesses which are seeking a takeover. 
-                        And no, because we are not a classifieds website, 
-                        but a private network of members.
-                    </p>
-                    <div id = "faq_more" class = "collapse">
-                        <p class = "faq_q mb-0 text-primary" data-toggle = "collapse" data-target = "#faq_a3" id = "faq_q3">
-                            What is Business Valuation?
-                        </p>
-                        <p class = "faq_a text-secondary collapse show" id = "faq_a3">
-                            Business valuation is process whereby a fair value of a company is arrived at 
-                            using one or more of the valuation methodologies.
-                        </p>
-                        <p class = "faq_q mb-0 text-primary" data-toggle = "collapse" data-target = "#faq_a4" id = "faq_q4">
-                            Can businesses / investors from any country register on SMERGERS?
-                        </p>
-                        <p class = "faq_a text-secondary collapse show" id = "faq_a4">
-                            SMERGERS is a global platform with businesses and acquirers / 
-                            investors from across the globe. Businesses and investors from any 
-                            country or industry can register on SMERGERS. The only pre-requisite is 
-                            that the business needs to be a registered entity with the Government and 
-                            should be able to produce proof of the same when required and investors should be working in a company or if 
-                            self employed must be able to produce proof of business.
-                        </p>
-                        <p class = "faq_q mb-0 text-primary" data-toggle = "collapse" data-target = "#faq_a5" id = "faq_q5">
-                            Should I use SMERGERS instead of an advisor?
-                        </p>
-                        <p class = "faq_a text-secondary collapse show" id = "faq_a5">
-                            You should use SMERGERS to gain qualified leads from large network of investors, 
-                            buyers, lenders and advisors from across the globe. You may also want to connect with suitable advisors on 
-                            SMERGERS who can help negotiate and close your deal.
+                    <div class = "row">
+                        <a class = "faq_q mb-0 text-primary" data-toggle = "collapse" href = "#faq_a1" id = "faq_q1">
+                            Is SMERGERS an investment bank?
+                        </a>
+                        <p class = "faq_a text-secondary collapse show" id = "faq_a1">
+                            SMERGERS is an investment banking platform which aims to remove all the 
+                            clutter and make quality introductions between businesses, investors, acquirers, 
+                            lenders and advisors, extending beyond their geographical location.
                         </p>
                     </div>
-                    <p class = "text-primary" id = "faq_toggle" data-toggle = "collapse" data-target = "#faq_more" onclick = "faq_show_function()" style = "font-size : 12px;">Show More</p>
+                    <div class = "row">
+                        <a class = "faq_q mb-0 text-primary" data-toggle = "collapse" href = "#faq_a2" id = "faq_q2">
+                            Is SMERGERS a ‘business for sale’ website?
+                        </a>
+                        <p class = "faq_a text-secondary collapse show" id = "faq_a2">
+                            Yes and no. Yes, because we have sell side profiles of businesses which are seeking a takeover. 
+                            And no, because we are not a classifieds website, 
+                            but a private network of members.
+                        </p>
+                    </div>
+                    
+                    <div id = "faq_more" class = "collapse">
+                        <div class = "row">
+                            <a class = "faq_q mb-0 text-primary" data-toggle = "collapse" href = "#faq_a3" id = "faq_q3">
+                                What is Business Valuation?
+                            </a>
+                            <p class = "faq_a text-secondary collapse show" id = "faq_a3">
+                                Business valuation is process whereby a fair value of a company is arrived at 
+                                using one or more of the valuation methodologies.
+                            </p>
+                        </div>
+                        <div class = "row">
+                            <a class = "faq_q mb-0 text-primary" data-toggle = "collapse" href = "#faq_a4" id = "faq_q4">
+                                Can businesses / investors from any country register on SMERGERS?
+                            </a>
+                            <p class = "faq_a text-secondary collapse show" id = "faq_a4">
+                                SMERGERS is a global platform with businesses and acquirers / 
+                                investors from across the globe. Businesses and investors from any 
+                                country or industry can register on SMERGERS. The only pre-requisite is 
+                                that the business needs to be a registered entity with the Government and 
+                                should be able to produce proof of the same when required and investors should be working in a company or if 
+                                self employed must be able to produce proof of business.
+                            </p>
+                        </div>
+                        <div class = "row">
+                            <a class = "faq_q mb-0 text-primary" data-toggle = "collapse" href = "#faq_a5" id = "faq_q5">
+                                Should I use SMERGERS instead of an advisor?
+                            </a>
+                            <p class = "faq_a text-secondary collapse show" id = "faq_a5">
+                                You should use SMERGERS to gain qualified leads from large network of investors, 
+                                buyers, lenders and advisors from across the globe. You may also want to connect with suitable advisors on 
+                                SMERGERS who can help negotiate and close your deal.
+                            </p>
+                        </div>
+                        
+                    </div>
+                    <a class = "text-primary" id = "faq_toggle" data-toggle = "collapse" href = "#faq_more" style = "font-size : 12px;text-decoration : none !important;">Show More</a>
                 </div>
             </div>
         </div>
@@ -954,20 +1005,29 @@
     <script>
         $(document).ready(function(){
             $('[data-toggle="tooltip"]').tooltip();
-            $(".accordion").accordion();
             $('#help_btn').click(function(){
                 $('#help_modal').modal('toggle');
             });
+
+            $("#yahoo").hover(function(){
+                $("#news_info").html("For the World's 460 Million SMEs, FinTech Firm SMERGERS to Become a One-stop Investment Bank.");
+            });
+            $("#silicon").hover(function(){
+                $("#news_info").html("Silicon India names SMERGERS as brand of the year 2015 in Investment Banking Platform Category.");
+            });
+            $("#economic").hover(function(){
+                $("#news_info").html("Bangalore-based online marketplace for small and medium businesses matches profiles with algorithms, filters and ratings.");
+            });
+            $("#yourstory").hover(function(){
+                $("#news_info").html("Bangalore-based SMERGERS, serving the online financial services market, is a technology platform that connects businesses and investors across the globe.");
+            });
+            $("#entrepreneur").hover(function(){
+                $("#news_info").html("SMERGERS, an online M&A firm helping buyers and sellers of SMEs, observes that the M&A activity in Indian SMEs is substantially unorganized.");
+            });
+            $("#mintasia").hover(function(){
+                $("#news_info").html("Nimit Finance buys 50% stake in Gujarat based Avity Agrotech via SMERGERS");
+            });
         });
-    </script>
-    <script>
-        function faq_show_function(){
-            var div=document.getElementById("faq_toggle");
-            if(div.innerHTML === "Show More"){
-                div.innerHTML = "Show Less";}
-            else if(div.innerHTML === "Show Less"){
-                div.innerHTML = "Show More";}
-        }
     </script>
 </body>
 
