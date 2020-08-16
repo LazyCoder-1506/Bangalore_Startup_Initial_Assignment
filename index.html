@@ -15,19 +15,19 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-sm fixed-top pr-0 vw-100" id = "navigation_bar">
+    <nav class="navbar navbar-expand-sm fixed-top" id = "navigation_bar">
         <div class="container-fluid">
             <button class="navbar-toggler shadow-none border-0" type="button" data-toggle="collapse" data-target="#Navbar">
                 <i class = "fa fa-bars"></i>
             </button>
-            <div class = "mr-auto"><a class = "ml-1 mr-0 pr-0" href="#">SMERGERS</a></div>
+            <div class = "mr-auto"><a class = "navbar-brand text-white" href="#">SMERGERS</a></div>
             
             <div class="collapse navbar-collapse" id="Navbar">
                 <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active"><a class="nav-link" href="#"><span class="fa fa-home fa-md"></span> Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./aboutus.html"><span class="fa fa-info fa-md"></span> About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-md"></span> Menu</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contactus.html"><span class="fa fa-address-card fa-md"></span> Contact</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#"><span class="fa fa-home fa-md"></span> Home</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="./aboutus.html"><span class="fa fa-info fa-md"></span> About</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#"><span class="fa fa-list fa-md"></span> Menu</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="contactus.html"><span class="fa fa-address-card fa-md"></span> Contact</a></li>
                 </ul>
                 <span class="navbar-text" id= "login_btn">
                     <span class="fa fa-sign-in"></span> Login</a>
@@ -115,7 +115,7 @@
     <header class="jumbotron pb-0 px-0" id = "home_header">
         <div class="container">
             <div class = "row row-content">
-                <div class = "col-12" style = "text-align : center">
+                <div class = "col-12 mt-5" style = "text-align : center">
                     <h1>Some Introductory Text</h1>
                     <p class = "mb-5">
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
@@ -1735,6 +1735,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script>
+        $(function () {
+            $(window).scroll(function () {
+                $('#navigation_bar').toggleClass('scrolled', $(window).scrollTop() > 50);
+            });
+        });
+    </script>
+    <script>
         $(document).ready(function(){
             $('[data-toggle="tooltip"]').tooltip();
             $('#help_btn').click(function(){
@@ -1763,13 +1770,6 @@
             $("#mintasia").hover(function(){
                 $("#news_info").html("Nimit Finance buys 50% stake in Gujarat based Avity Agrotech via SMERGERS");
             });
-
-            $(function () {
-            $(document).scroll(function () {
-                var $nav = $("#navigation_bar");
-                $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
-            });
-});
         });
     </script>
 </body>
