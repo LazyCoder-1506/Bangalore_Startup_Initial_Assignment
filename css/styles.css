@@ -1,3 +1,12 @@
+html,body
+    {
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+        overflow-x: hidden; 
+    }
+
 #business_body
 {
     padding : 50px 0px 0px 0px;
@@ -197,7 +206,7 @@ img
     transform : rotate(270deg);
     -webkit-transform : rotate(270deg);
     position : fixed;
-    right : -30px;
+    right : -13px;
     bottom : 30vh;
 }
 
@@ -298,14 +307,12 @@ img
         padding-bottom : 50px;
     }
 
-    html,body
+    .fixed_right_button
     {
-        width: 100%;
-        height: 100%;
-        margin: 0px;
-        padding: 0px;
-        overflow-x: hidden; 
+        right : -30px;
     }
+
+    
 }
 
 @media only screen and (min-width: 768px) { 
