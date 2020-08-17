@@ -1739,6 +1739,9 @@
             $(window).scroll(function () {
                 $('#navigation_bar').toggleClass('scrolled', $(window).scrollTop() > 50);
             });
+            $("body").scroll(function () {
+                $('#navigation_bar').toggleClass('scrolled', $("body").scrollTop() > 50);
+            });
         });
     </script>
     <script>
