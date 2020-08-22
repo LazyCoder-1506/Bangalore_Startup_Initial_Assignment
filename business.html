@@ -15,18 +15,19 @@
 </head>
 
 <body id = "business_body">
-    <nav class="navbar navbar-dark bg-primary navbar-expand-sm fixed-top">
+    <nav class="navbar navbar-expand-sm fixed-top" id = "navigation_bar">
         <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
-                <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler shadow-none border-0" type="button" data-toggle="collapse" data-target="#Navbar">
+                <i class = "fa fa-bars"></i>
             </button>
-            <a class="navbar-brand mr-auto" href="#">Smergers</a>
+            <div class = "mr-auto"><a class = "navbar-brand text-white" href="#">SMERGERS</a></div>
+            
             <div class="collapse navbar-collapse" id="Navbar">
                 <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active"><a class="nav-link" href="#"><span class="fa fa-home fa-md"></span> Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./aboutus.html"><span class="fa fa-info fa-md"></span> About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-md"></span> Menu</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contactus.html"><span class="fa fa-address-card fa-md"></span> Contact</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#"><span class="fa fa-home fa-md"></span> Home</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="./aboutus.html"><span class="fa fa-info fa-md"></span> About</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#"><span class="fa fa-list fa-md"></span> Menu</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="contactus.html"><span class="fa fa-address-card fa-md"></span> Contact</a></li>
                 </ul>
                 <span class="navbar-text" id= "login_btn">
                     <span class="fa fa-sign-in"></span> Login</a>
@@ -34,9 +35,87 @@
             </div>
         </div>
     </nav>
+    <!-- filter button-->
+    <button type = "button" class = "d-lg-none btn btn-block btn-primary fixed-bottom" data-toggle = "collapse" data-target = "#side_panel" id = "side_panel_toggler">
+        <a class = "text-white no_underline_link" href = "#side_panel" style = "display : block">Filters</a>
+    </button>
+    <!-- help button-->
+    <button class = "btn btn-sm btn-primary fixed_right_button shadow-none" id = "help_btn" data-toggle = "collapse" data-target = "#help_modal">Need Help?</button>
 
-    <button type = "button" class = "d-lg-none btn btn-block btn-primary fixed-bottom" data-toggle = "collapse" data-target = "#side_panel" id = "side_panel_toggler">Filters</button>
-
+    <div id="help_modal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Need Help? <small>Write to Us!</small></h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-row mt-3">
+                            <div class = "col-12">
+                                <h6>Question</h6>
+                            </div> 
+                            <div class = "col-12">
+                                <textarea class = "help_input" id = "question" name = "question" rows = "4"></textarea>
+                            </div>
+                        </div>
+                        <div class = "form-row mt-3">
+                            <div class = "col-12 col-md-6">
+                                <div class = "row row-content">
+                                    <div class = "col-12">
+                                        <h6>E-mail</h6>
+                                    </div>
+                                </div>
+                                <div class = "row row-content">
+                                    <div class = "col-12">
+                                        <input class = "help_input" type = "email" name = "email" id = "email">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class = "col-12 col-md-6">
+                                <div class = "row row-content">
+                                    <div class = "col-12">
+                                        <h6>Mobile Number (Optional)</h6>
+                                    </div>
+                                </div>
+                                <div class = "row row-content">
+                                    <div class = "col-12">
+                                        <input class = "help_input" type = "text" name = "mobile" id = "mobile">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class = "form-row mt-3" style = "background-color : #f5f5f5">
+                            <div class = "col-12">
+                                <div class = "row row-content">
+                                    <div class = "col-12">
+                                        <h6>Frequently Asked questions</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class = "row row-content">
+                                <div class = "col-12">
+                                    <ul class = "list-unstyled ml-2">
+                                        <li><a style = "font-size : 12px;" href = "#">How can I contact you or meet you?</a></li>
+                                        <li><a style = "font-size : 12px;" href = "#">How do I get started on SMERGERS?</a></li>
+                                        <li><a style = "font-size : 12px;" href = "#">How successful has SMERGERS been in helping its users successfully close a deal?</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row mt-3">
+                            <button type="button" class="btn btn-secondary btn-sm ml-auto"><i class = "fa fa-camera"></i> Screenshot</button>
+                            <button type="submit" class="btn btn-secondary btn-sm ml-1"><i class = "fa fa-paperclip"></i> Attach File</button>
+                            <button type="submit" class="btn btn-success btn-sm ml-1">Submit</button>        
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- filter section on the left-->
     <div class = "container-fluid">
         <div class = "row row-content">
             <div class = "col-12 col-lg-3 collapse" id = "side_panel" style = "background-color : lightgrey">
@@ -101,7 +180,7 @@
                         </form>
                         <hr style = "border-bottom : 1px solid grey">
                         <button class = "btn text-secondary" style = "background-color : lightgrey">Industries <i class = "fa fa-sitemap"></i></button>
-                        <input type = "text" id = "location_filter" placeholder = "Filter...">
+                        <input type = "text" id = "industry_filter" placeholder = "Filter...">
                         <form>
                             <div class = "checkbox">
                                 <label><input type="checkbox" value = ""> Business Services</label>
@@ -751,18 +830,182 @@
                         </a>
                     </div>
                 </diV>
-
-                <div class = "row row-content justify-content-center">
+                <!-- previous and next button. If needed, make this invisible-->
+                <div class = "row row-content justify-content-center" id = "business_prev_next_buttons">
                     <button class = "btn mb-5 mr-2 disabled">&#8810; Previous</button>
                     <button class = "btn btn-outline-dark mb-5">Next &#8811;</button>
                 </div>
             </div>
         </div>
     </div>
+    <!-- FAQ section-->
+    <div class = "vw-100 py-4" style = "background-color : #f1f1f1">
+        <div class = "container">
+            <div class = "row row-content">
+                <div class = "col-12 col-md-2">
+                    <p style = "font-size : 24px; color : grey">Frequently Asked Questions</p>
+                </div>
+                <div class = "col-12 col-md-10">
+                    <div class = "row row-content pl-2">
+                        <a class = "faq_q mb-0 text-primary" data-toggle = "collapse" href = "#faq_a1" id = "faq_q1">
+                            Is SMERGERS an investment bank?
+                        </a>
+                        <p class = "faq_a text-secondary collapse show" id = "faq_a1">
+                            SMERGERS is an investment banking platform which aims to remove all the 
+                            clutter and make quality introductions between businesses, investors, acquirers, 
+                            lenders and advisors, extending beyond their geographical location.
+                        </p>
+                    </div>
+                    <div class = "row row-content pl-2">
+                        <a class = "faq_q mb-0 text-primary" data-toggle = "collapse" href = "#faq_a2" id = "faq_q2">
+                            Is SMERGERS a ‘business for sale’ website?
+                        </a>
+                        <p class = "faq_a text-secondary collapse show" id = "faq_a2">
+                            Yes and no. Yes, because we have sell side profiles of businesses which are seeking a takeover. 
+                            And no, because we are not a classifieds website, 
+                            but a private network of members.
+                        </p>
+                    </div>
+                    
+                    <div id = "faq_more" class = "collapse">
+                        <div class = "row row-content pl-2">
+                            <a class = "faq_q mb-0 text-primary" data-toggle = "collapse" href = "#faq_a3" id = "faq_q3">
+                                What is Business Valuation?
+                            </a>
+                            <p class = "faq_a text-secondary collapse show" id = "faq_a3">
+                                Business valuation is process whereby a fair value of a company is arrived at 
+                                using one or more of the valuation methodologies.
+                            </p>
+                        </div>
+                        <div class = "row row-content pl-2">
+                            <a class = "faq_q mb-0 text-primary" data-toggle = "collapse" href = "#faq_a4" id = "faq_q4">
+                                Can businesses / investors from any country register on SMERGERS?
+                            </a>
+                            <p class = "faq_a text-secondary collapse show" id = "faq_a4">
+                                SMERGERS is a global platform with businesses and acquirers / 
+                                investors from across the globe. Businesses and investors from any 
+                                country or industry can register on SMERGERS. The only pre-requisite is 
+                                that the business needs to be a registered entity with the Government and 
+                                should be able to produce proof of the same when required and investors should be working in a company or if 
+                                self employed must be able to produce proof of business.
+                            </p>
+                        </div>
+                        <div class = "row row-content pl-2">
+                            <a class = "faq_q mb-0 text-primary" data-toggle = "collapse" href = "#faq_a5" id = "faq_q5">
+                                Should I use SMERGERS instead of an advisor?
+                            </a>
+                            <p class = "faq_a text-secondary collapse show" id = "faq_a5">
+                                You should use SMERGERS to gain qualified leads from large network of investors, 
+                                buyers, lenders and advisors from across the globe. You may also want to connect with suitable advisors on 
+                                SMERGERS who can help negotiate and close your deal.
+                            </p>
+                        </div>
+                        
+                    </div>
+                    <a class = "text-primary" id = "faq_toggle" data-toggle = "collapse" href = "#faq_more" style = "font-size : 12px;text-decoration : none !important;">Show More</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <footer>
-        <h3>Here will be footer</h3>
-        <h5>Made by Pranayan Metiya</h5>
+    <footer class = "pt-4">
+        <div class = "container">
+            <div class = "row row-content">
+                <div class = "col-6 col-md-2">
+                    <h6 class = "foot_header">Businesses</h6>
+                    <ul class = "list-unstyled">
+                        <li><a class = "foot_link">Businesses For Sale</a></li>
+                        <li><a class = "foot_link">Investment Opportunities</a></li>
+                        <li><a class = "foot_link">Businesses Seeking Loan</a></li>
+                        <li><a class = "foot_link">Business Assets For Sale</a></li>
+                    </ul>
+                    <h6 class = "foot_header">Franchises</h6>
+                    <ul class = "list-unstyled">
+                        <li><a class = "foot_link">Franchises For Sale</a></li>
+                        <li><a class = "foot_link">Franchise Investors</a></li>
+                    </ul>
+                </div>
+                <div class = "col-6 col-md-2">
+                    <h6 class = "foot_header">Investors</h6>
+                    <ul class = "list-unstyled">
+                        <li><a class = "foot_link">Individual Investors</a></li>
+                        <li><a class = "foot_link">Business Buyers</a></li>
+                        <li><a class = "foot_link">Corporate Investors</a></li>
+                        <li><a class = "foot_link">Venture Capital Firms</a></li>
+                        <li><a class = "foot_link">Private Equity Firms</a></li>
+                        <li><a class = "foot_link">Family Offices</a></li>
+                        <li><a class = "foot_link">Business Lenders</a></li>
+                    </ul>
+                </div>
+                <div class = "col-6 col-md-2">
+                    <h6 class = "foot_header">Advisors</h6>
+                    <ul class = "list-unstyled">
+                        <li><a class = "foot_link">Businesses Seeking Advisors</a></li>
+                        <li><a class = "foot_link">Investment Banks</a></li>
+                        <li><a class = "foot_link">M&A Advisors</a></li>
+                        <li><a class = "foot_link">Business Brokers</a></li>
+                        <li><a class = "foot_link">CRE Brokers</a></li>
+                        <li><a class = "foot_link">Financial Consultants</a></li>
+                        <li><a class = "foot_link">Accountants</a></li>
+                        <li><a class = "foot_link">Law Firms</a></li>
+                    </ul>
+                </div>
+                <div class = "col-6 col-md-2">
+                    <h6 class = "foot_header">Get Started</h6>
+                    <ul class = "list-unstyled">
+                        <li><a class = "foot_link">Sell your Business</a></li>
+                        <li><a class = "foot_link">Finance your Business</a></li>
+                        <li><a class = "foot_link">Buy a Business</a></li>
+                        <li><a class = "foot_link">Invest in a Business</a></li>
+                        <li><a class = "foot_link">Value your Business</a></li>
+                        <li><a class = "foot_link">Register as Advisor</a></li>
+                    </ul>
+                </div>
+                <div class = "col-6 col-md-2">
+                    <h6 class = "foot_header">Company</h6>
+                    <ul class = "list-unstyled">
+                        <li><a class = "foot_link">About</a></li>
+                        <li><a class = "foot_link">Testimonials</a></li>
+                        <li><a class = "foot_link">Blog</a></li>
+                        <li><a class = "foot_link">Press</a></li>
+                        <li><a class = "foot_link">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class = "col-6 col-md-2">
+                    <h6 class = "foot_header">SMERGERS</h6>
+                    <ul class = "list-unstyled">
+                        <li><a class = "foot_link"><i class = "fa fa-envelope text-info"></i> Contact Us</a></li>
+                        <li><a class = "foot_link"><i class = "fa fa-facebook-square text-primary"></i> Facebook</a></li>
+                        <li><a class = "foot_link"><i class = "fa fa-linkedin-square text-primary"></i> LinkedIn</a></li>
+                        <li><a class = "foot_link"><i class = "fa fa-youtube-play text-danger"></i> YouTube</a></li>
+                        <li><a class = "foot_link"><i class = "fa fa-twitter-square text-primary"></i> Twitter</a></li>
+                        <li><a class = "foot_link"><i class = "fa fa-instagram"></i> Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class = "mt-5">
+            <div class = "row row-content">
+                <div class = "col-12 col-md-6">
+                    <p class = "foot_link">Copyright © 2020 SMERGERS Online Services Private Limited. All Rights Reserved.</p>
+                </div>
+                <div class = "col-12 col-md-6 text-lg-right">
+                    <ul class = "list-inline">
+                        <li class = "list-inline-item ml-1"><a href = "#">Privacy Policy</a></li>
+                        <li class = "list-inline-item ml-1"><a href = "#">Terms of Use</a></li>
+                        <li class = "list-inline-item ml-1"><a href = "#">Refund Policy</a></li>
+                        <li class = "list-inline-item ml-1"><a href = "#">Best Practices</a></li>
+                        <li class = "list-inline-item ml-1"><a href = "#">Sitemap</a></li>
+                    </ul>
+                    <ul class = "list-inline mb-5">
+                        <li class = "list-inline-item ml-1"><button class = "btn btn-xs p-1 btn-primary">VISA</button></li>
+                        <li class = "list-inline-item ml-1"><button class = "btn btn-xs p-1 btn-danger">MasterCard</button></li>
+                        <li class = "list-inline-item ml-1"><button class = "btn btn-xs p-1 btn-info">stripe</button></li>
+                        <li class = "list-inline-item ml-1"><button class = "btn btn-xs p-1 btn-primary">APEX</button></li>
+                        <li class = "list-inline-item ml-1"><button class = "btn btn-xs p-1 btn-success">Net Banking</button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
@@ -770,9 +1013,29 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script>
+        $(function () {
+            $(window).scroll(function () {
+                $('#navigation_bar').toggleClass('scrolled', $(window).scrollTop() > 50);
+            });
+            $("body").scroll(function () {
+                $('#navigation_bar').toggleClass('scrolled', $("body").scrollTop() > 50);
+            });
+        });
+    </script>
+    <script>
         $(document).ready(function(){
             $('[data-toggle="tooltip"]').tooltip();
-            $("#accordion").accordion();
+            $('#help_btn').click(function(){
+                $('#help_modal').modal('toggle');
+            });
+            $("#faq_toggle").click(function(){
+                var s = $(this);
+                s.html(s.text() == 'Show More' ? 'Show Less' : 'Show More');
+            });
+
+            $('#side_panel_toggler').click(function() {
+                $(window).scrollTop(50);
+            });
         });
     </script>
 </body>
